@@ -17,8 +17,10 @@
 - Make mutations w/ traits
     - User can pick 3 different mutations
 
+- Population in array
+
 - One breeding round
-    - Pick 2 random types and mix to breed
+    - Pick 2 random types and mix to breed a third one
     - Exponential growth?
 
 - Add environmental events
