@@ -21,7 +21,7 @@
 
 - One breeding round
     - Pick 2 random types and mix to breed a third one
-    - Exponential growth?
+    - Reproduction rate = 1.5x
 
 - Add environmental events
     - Cold

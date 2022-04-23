@@ -8,31 +8,31 @@ const MEDIUM = "medium"
 const BULKY = "bulky"
 const SIZE = [THIN, MEDIUM, BULKY]
 
+const NO_HAIR = "no hair"
 const SHORT_HAIR = "short hair"
 const MEDIUM_HAIR = "medium hair"
 const LONG_HAIR = "long hair"
-const HAIR = [SHORT_HAIR, MEDIUM_HAIR, LONG_HAIR]
+const HAIR = [NO_HAIR, SHORT_HAIR, MEDIUM_HAIR, LONG_HAIR]
 
 const STRIPES = "stripes"
-const STRIPELESS = "stripeless"
-const CAMOUFLAGE = [STRIPES, STRIPELESS]
+const NO_STRIPES = "no stripes"
+const CAMO = [STRIPES, NO_STRIPES]
 
-class Mutation {
-    constructor(legs, size, hair, camouflage,) {
+class Traits {
+    constructor(legs, size, hair, camo,) {
         this.legs = legs;
         this.size = size;
         this.hair = hair;
-        this.camouflage = camouflage;
+        this.camo = camo;
     }
-
 }
 
-function get_random_mutation() {
-    return new Mutation(
+function create_random_offspring() {
+    return new Traits(
         random_element(LEGS),
         random_element(SIZE),
         random_element(HAIR),
-        random_element(CAMOUFLAGE)
+        random_element(CAMO)
     )
 }
 

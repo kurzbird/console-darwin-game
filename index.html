@@ -7,9 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="mutation.js"></script>
+    <script src="traits.js"></script>
     <script>
-        let population = [get_random_mutation(), get_random_mutation(), get_random_mutation()];
+        let population = [create_random_offspring(), create_random_offspring(), create_random_offspring()];
+
+        function reproductionRound() {
+            let offspring = []
+            for (let i = 0; i < population.length/2; i++) {
+                offspring += singleOffspring(random_element(population), random_element(population));
+            }
+            population = population.concat(offspring);
+            return population
+        }
+
+        // defaults to lower index instead of 50/50
+        function singleOffspring(animal_1, animal_2) {
+            return new Traits(
+                LEGS[Math.floor((LEGS.indexOf(animal_1.legs) + LEGS.indexOf(animal_2.legs)) / 2)],
+                SIZE[Math.floor((SIZE.indexOf(animal_1.size) + SIZE.indexOf(animal_2.size)) / 2)],
+                HAIR[Math.floor((HAIR.indexOf(animal_1.hair) + HAIR.indexOf(animal_2.hair)) / 2)],
+                CAMO[Math.floor((CAMO.indexOf(animal_1.camo) + CAMO.indexOf(animal_2.camo)) / 2)]
+            )
+        }
+
     </script>
 </body>
 </html>
