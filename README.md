@@ -11,6 +11,7 @@
 - Make species w/ traits
     - Legs: short, medium, long
     - Camo: stripes, no stripes
+    - Neck: short, medium, long
     - Size: thin, medium, bulky
     - Hair: no hair, short hair, furry
 
@@ -23,14 +24,19 @@
     - Pick 2 random types and mix to breed a third one
     - Reproduction rate = 1.5x
 
-- Add environmental events
+- Add environmental events - 90% max chance of survival
     - Cold
         - Legs: short 80% chance of living
         - Size: bulky 80% chance of living
         - Hair: furry 80% chance of living
     - Volcano
+        - Legs: short
+        - Size: thin
     - Virus
+        - Needs diversity
     - Predator
+        - Legs: long
+        - Camo: stripes
     - Tall plants w/ fruits
     - Global warming
 

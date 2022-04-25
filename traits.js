@@ -8,6 +8,11 @@ const MEDIUM = "medium"
 const BULKY = "bulky"
 const SIZE = [THIN, MEDIUM, BULKY]
 
+const SHORT_NECK = "short neck"
+const MEDIUM_NECK = "medium neck"
+const LONG_NECK = "long neck"
+const NECK = [SHORT_NECK, MEDIUM_NECK, LONG_NECK]
+
 const NO_HAIR = "no hair"
 const SHORT_HAIR = "short hair"
 const MEDIUM_HAIR = "medium hair"
@@ -19,23 +24,25 @@ const NO_STRIPES = "no stripes"
 const CAMO = [STRIPES, NO_STRIPES]
 
 class Traits {
-    constructor(legs, size, hair, camo,) {
+    constructor(legs, size, neck, hair, camo) {
         this.legs = legs;
         this.size = size;
+        this.neck = neck;
         this.hair = hair;
         this.camo = camo;
     }
 }
 
-function create_random_offspring() {
+function createRandomOffspring() {
     return new Traits(
-        random_element(LEGS),
-        random_element(SIZE),
-        random_element(HAIR),
-        random_element(CAMO)
-    )
+        randomElement(LEGS),
+        randomElement(SIZE),
+        randomElement(NECK),
+        randomElement(HAIR),
+        randomElement(CAMO)
+    );
 }
 
-function random_element(array) {
-    return array[Math.floor(Math.random() * array.length)]
+function randomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
 }
